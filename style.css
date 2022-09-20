@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-bright-blue: hsl(245, 75%, 52%);
+    --secondary-pale-blue: hsl(225, 100%, 98%);
+    --secondary-desaturated-blue: hsl(224, 23%, 55%);
+    --secondary-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-center {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 330px;
+    border-radius: 16px;
+    background-color: #FFF;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card .img img {
+    max-width: 330px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.card .content .title {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin: 15px 0;
+    color: var(--primary-bright-blue);
+}
+
+.card .content .description {
+    font-weight: 400;
+    text-align: center;
+    padding: 15px 15px;
+    color: var(--secondary-dark-blue);
+}
+
+.card .content .subscription {
+    border-radius: 16px;
+    background-color: var(--secondary-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 15px;
+}
+
+.card .content .actions {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.btn {
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+    background-color: var(--primary-bright-blue);
+}
+
+.btn-primary:hover {
+    opacity: 0.7;
+}
+
+.btn-secondary {
+    color: var(--secondary-desaturated-blue);
+}
+
+.btn-secondary:hover {
+    color: var(--secondary-dark-blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-image: url('./images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
